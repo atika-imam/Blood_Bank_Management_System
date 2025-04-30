@@ -31,6 +31,6 @@ $result = $conn->query("SELECT * FROM donors");
       </tr>
     <?php endwhile; ?>
   </table>
-  <p><a href="index.php">← Back to Home</a></p>
+  <p><a href="index.php" class="back-link">← Back to Home</a></p>
 </body>
 </html>
