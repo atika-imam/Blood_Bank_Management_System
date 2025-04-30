@@ -72,8 +72,7 @@ $blood = $_POST['blood'] ?? '';
         ?>
       </table>
     <?php endif; ?>
-
-    <p><a href="index.php">← Back to Home</a></p>
+    <p><a href="index.php" class="back-link">← Back to Home</a></p>
   </div>
 </body>
 </html>
