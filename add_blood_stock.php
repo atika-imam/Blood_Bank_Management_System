@@ -34,6 +34,6 @@ $conn->close();
     <input type="number" name="quantity" required><br><br>
     <button type="submit">Update Stock</button>
   </form>
-   <p><a href="index.php">← Back to Home</a></p>
+  <p><a href="index.php" class="back-link">← Back to Home</a></p>
 </body>
 </html>
