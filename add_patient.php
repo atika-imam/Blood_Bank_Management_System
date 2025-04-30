@@ -49,7 +49,7 @@ $conn->close();
             <input type="text" name="contact_no" placeholder="Contact No" required><br><br>
             <button type="submit">Add Patient</button>
         </form>
-        <p><a href="index.php">← Back to Home</a></p>
+        <p><a href="index.php" class="back-link">← Back to Home</a></p>
     </div>
 </body>
 </html>
