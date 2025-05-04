@@ -43,7 +43,7 @@ include 'db_config.php';
   <li><a href="temperature_log_insert.php">Add Temperature Log</a></li> <!-- Log temperature records for blood storage -->
 
   <!-- Camp and hospital-related operations -->
-  <li><a href="camp_location_insert.php">Camp Location</a></li> <!-- Add new camp location -->
+  <li><a href="camp_location_insert.php">Add Camp Location</a></li> <!-- Add new camp location -->
   <li><a href="hospital_insert.php">Add Hospital</a></li> <!-- Add a new hospital -->
   <li><a href="supplier_insert.php">Add Supplier</a></li> <!-- Add supplier details -->
   <li><a href="inventory_insert.php">Add Inventory</a></li> <!-- Manage inventory of blood-related supplies -->
