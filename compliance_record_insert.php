@@ -10,10 +10,9 @@ include('db_config.php');
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $document_name = $_POST['document_name'];
     $issue_date = $_POST['issue_date'];
-    $expiry_date = $_POST['expiry_date'];
 
-    $stmt = $conn->prepare("INSERT INTO compliance_record (document_name, issue_date, expiry_date) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $document_name, $issue_date, $expiry_date);
+    $stmt = $conn->prepare("INSERT INTO compliance_record (document_name, issue_date) VALUES (?, ?)");
+    $stmt->bind_param("ss", $document_name, $issue_date);
 
     if ($stmt->execute()) {
         echo "Compliance record added successfully!";
@@ -43,9 +42,6 @@ $conn->close();
 
             <label for="issue_date">Issue Date:</label>
             <input type="date" name="issue_date" placeholder="Issue Date" required>
-
-            <label for="expiry_date">Expiry Date:</label>
-            <input type="date" name="expiry_date" placeholder="Expiry Date" required>
 
             <button type="submit">Add Record</button>
         </form>
