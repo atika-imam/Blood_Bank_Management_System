@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $blood_group = trim($_POST['blood_group']);
     $quantity = (int) $_POST['quantity'];
     $request_date = $_POST['request_date'];
-    $status = 'Pending';
+    $status = $_POST['status']; // Get from form
 
     // Use prepared statement correctly
     $stmt = $conn->prepare("INSERT INTO blood_request (hospital_id, blood_group, quantity, request_date, status) 
@@ -78,6 +78,17 @@ $conn->close();
         <div class="form-group">
             <label for="request_date">Request Date:</label>
             <input type="date" id="request_date" name="request_date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+                <option value="" disabled selected>-- Select Status --</option>
+                <option value="Pending">Pending</option>
+                <option value="Approved">Approved</option>
+                <option value="Rejected">Rejected</option>
+                <option value="Completed">Completed</option>
+            </select>
         </div>
 
         <button type="submit">Add Request</button>
