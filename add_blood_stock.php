@@ -29,8 +29,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $new_quantity = $row['quantity'] + $quantity;
 
         if ($new_quantity < 0) {
-            echo "Error: Not enough stock to subtract.";
+            echo "<script>alert('Not enough stock to subtract!'); window.location.href='add_blood_stock.php';</script>";
             exit;
+            
         }
 
         $sql = "UPDATE blood_stock SET quantity = $new_quantity WHERE blood_group = '$blood_group'";
