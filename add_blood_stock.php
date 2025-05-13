@@ -14,10 +14,35 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $blood_group = $_POST['blood_group'];
     $quantity = (int)$_POST['quantity'];
 
-    // Insert or update blood stock
-    $sql = "INSERT INTO blood_stock (blood_group, quantity) 
-            VALUES ('$blood_group', $quantity)
-            ON DUPLICATE KEY UPDATE quantity = GREATEST(0, quantity + $quantity)";
+    if ($quantity == 0) {
+        echo "Quantity cannot be zero.";
+        exit;
+    }
+
+    // Check if the blood group already exists
+    $sql_check = "SELECT quantity FROM blood_stock WHERE blood_group = '$blood_group'";
+    $result = $conn->query($sql_check);
+
+    if ($result->num_rows > 0) {
+        // Exists, update quantity
+        $row = $result->fetch_assoc();
+        $new_quantity = $row['quantity'] + $quantity;
+
+        if ($new_quantity < 0) {
+            echo "Error: Not enough stock to subtract.";
+            exit;
+        }
+
+        $sql = "UPDATE blood_stock SET quantity = $new_quantity WHERE blood_group = '$blood_group'";
+    } else {
+        // New entry
+        if ($quantity < 0) {
+            echo "Error: Cannot start with negative stock.";
+            exit;
+        }
+
+        $sql = "INSERT INTO blood_stock (blood_group, quantity) VALUES ('$blood_group', $quantity)";
+    }
 
     if ($conn->query($sql) === TRUE) {
         echo "Blood stock updated successfully!";
@@ -25,8 +50,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 }
-
 $conn->close();
+
 ?>
 
 <!DOCTYPE html>
