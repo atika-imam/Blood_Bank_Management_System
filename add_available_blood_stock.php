@@ -23,7 +23,11 @@ include('db_config.php');
         <th>Units Available</th>
       </tr>
       <?php
-        $sql = "SELECT blood_group, quantity FROM blood_stock";
+       $sql = "SELECT blood_group, SUM(quantity) AS quantity 
+       FROM blood_stock 
+       GROUP BY blood_group 
+       HAVING quantity > 0";
+
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
