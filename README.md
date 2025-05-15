@@ -89,12 +89,11 @@ The **Blood Bank Management System** is a full-stack web-based application devel
    - `blood_group_id` instead of blood group text
    - etc.
 
-## Benefits of 2NF
+## Benefits of 2NF - To make database more efficient and maintain better data consistency.
 **Eliminated update anomalies** - Change values in one place only  
 **Fixed insert issues** - Just reference IDs, no duplicate data entry  
 **Prevented delete problems** - Removing records keeps lookup data intact  
 
-**Database is now more efficient and maintains better data consistency.
 ---
 
 ## Module Descriptions
