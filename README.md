@@ -15,31 +15,31 @@ The **Blood Bank Management System** is a full-stack web-based application devel
 
 ---
 
-## 🧠 Key Features
+## Key Features
 
-### 🔐 Authentication & Security
+### Authentication & Security
 - Secure login/logout system (admin access only)
 - Session-based authentication
 - Role-based access control
 - SQL injection prevention using prepared statements
 
-### 🧑‍⚕️ Donor & Patient Management
+### Donor & Patient Management
 - Donor registration with medical history
 - Patient registration with disease details
 - Matching compatible donors for patient requests
 
-### 🩸 Blood Inventory & Requests
+### Blood Inventory & Requests
 - Real-time blood stock monitoring by blood group
 - Blood request tracking and approval
 - Expiry date tracking and alert system
 - Temperature monitoring placeholders
 
-### 🏥 Hospital & Volunteer Coordination
+### Hospital & Volunteer Coordination
 - Hospital and camp location registration
 - Volunteer, doctor, and nurse scheduling
 - Ambulance and transportation request handling
 
-### 📊 Administrative Modules
+### Administrative Modules
 - Billing and financial record keeping
 - Compliance and test report management
 - Feedback collection system
@@ -95,10 +95,10 @@ The **Blood Bank Management System** is a full-stack web-based application devel
 ✔ **Prevented delete problems** - Removing records keeps lookup data intact  
 
 Database is now more efficient and maintains better data consistency.
-## 📂 Module Descriptions
+---
 
+## Module Descriptions
 Some of the core files include:
-
 | File | Description |
 |------|-------------|
 | `index.php` | Landing page |
@@ -130,16 +130,16 @@ Some of the core files include:
 
 ## Future Enhancements
 
-- 📱 Mobile application integration
-- 📧 SMS/email alerts for critical needs
-- 📊 Advanced analytics dashboard
-- 🧠 AI for predicting demand & donor suggestions 
-- 🌐 Multi-language support  
-- 🔐 Two-factor admin authentication
-- 🌐 Multi-language support
-- 🔄 API integration with hospital EHR systems  
-- 🧪 Barcode scanning for blood units tracking
+- Mobile application integration
+- SMS/email alerts for critical needs
+- Advanced analytics dashboard
+- AI for predicting demand & donor suggestions 
+- Multi-language support  
+- Two-factor admin authentication
+- Multi-language support
+- API integration with hospital EHR systems  
+- Barcode scanning for blood units tracking
 
 ---
 
-## PROVIDE AND SAVE LIVES!
+## PROVIDE BLOOD AND SAVE LIVES!
