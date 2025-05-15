@@ -11,76 +11,88 @@ include 'db_config.php';
 <head>
   <title>Blood Bank Management</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f8f9fa;
-      padding: 40px;
-    }
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url('background/index_background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px;
+  }
 
-    h1 {
-      color: #c82333;
-      text-align: center;
-      margin-bottom: 40px;
-    }
+  .heading-box {
+    border: 2px solid white;
+    width: 80%;
+    margin: 0 auto 40px auto;
+    padding: 20px;
+    text-align: center;
+    color: rgb(241, 218, 220);
+    font-size: 28px;
+    font-weight: bold;
+    background-color: #dc3545;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px white;
+  }
 
-    h2 {
-      color: #343a40;
-      margin-top: 30px;
-      margin-bottom: 10px;
-    }
+  h2 {
+    color:rgb(38, 31, 62);
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 30px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 
-    li {
-      display: inline-block;
-    }
+  li {
+    display: inline-block;
+  }
 
-    a {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #dc3545;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 14px;
-      transition: background-color 0.3s ease;
-    }
+  a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
 
-    a:hover {
-      background-color: #c82333;
-    }
+  a:hover {
+    background-color:rgb(235, 67, 67);
+  }
 
-    /* Optional: Section borders */
-    h2 + ul {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 15px;
-      background-color: #ffffff;
-    }
+  h2 + ul {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color:rgb(237, 101, 108);
+  }
   </style>
 </head>
 
 <body>
 <div class="container">
-<h1>Welcome to Blood Bank Management System</h1>
+
+  <div class="heading-box">
+    Welcome to Blood Bank Management System
+  </div>
 
 <h2>🔍 View Records</h2>
 <ul>
   <li><a href="donor_details.php">View Donors</a></li>
   <li><a href="patient_details.php">View Patients</a></li>
   <li><a href="doctor_details.php">View Doctors</a></li>
-  <li><a href="stock.php">View Stock</a></li>
   <li><a href="search.php">Search by Blood</a></li>
 </ul>
 
-<h2>➕ Add/View Individuals</h2>
+<h2>➕ Add Individuals</h2>
 <ul>
   <li><a href="add_donor.php">Add Donor</a></li>
   <li><a href="add_patient.php">Add Patient</a></li>
@@ -114,7 +126,7 @@ include 'db_config.php';
   <li><a href="inventory_insert.php">Add Inventory</a></li>
 </ul>
 
-<h2>👨‍⚕️ Staff & Scheduling</h2>
+<h2>👨‍⚕ Staff & Scheduling</h2>
 <ul>
   <li><a href="volunteer_insert.php">Add Volunteer</a></li>
   <li><a href="shift_schedule_insert.php">Add Shift Schedule</a></li>
@@ -134,6 +146,6 @@ include 'db_config.php';
   <li><a href="logout.php">Logout</a></li>
 </ul>
 
-  </div>
+</div>
 </body>
 </html>
